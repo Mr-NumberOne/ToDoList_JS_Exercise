@@ -9,25 +9,42 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Qwitcher+Grypen&display=swap" rel="stylesheet" />
+  <script src="main.js"></script>
 </head>
 
 <body>
   <div class="main_body">
+    <h1>Mr.Number One's ToDo List</h1>
     <div class="row">
       <input type="text" class="in" id="in2" />
       <button class="btn" id="add" onclick="addTolist()">add</button>
-      <button class="btn" id="clear" onclick="return (confirm('Sure you want to clear all ToDo\'s ?'))? Clearlist():''">
+      <button class="btn" id="clear"
+        onclick="return (confirm('Sure you want to clear all ToDo\'s ?'))? Clearlist(ourlist,'todolist'):''">
         clear
       </button>
     </div>
     <hr />
-    <h1>Todo Lists</h1>
+    <h2>Todo Lists</h2>
     <div class="row" id="todolist">
 
     </div>
+    <button class="btn" id="showDoneList" onclick="showDoneList()" style="width: 200px;">show done ToDos</button>
+    <div class="" id="done_body">
+      <hr />
+      <h2>Done ToDos
+        <button class="btn" id="HideDoneList" onclick="HideDoneList()">X</button>
+        <button class="btn" id="clear2"
+          onclick="return (confirm('Sure you want to clear all ToDo\'s ?'))? Clearlist(Donelist,'donetodolist'):''">
+          clear
+        </button>
+      </h2>
+      <br>
+      <div class="row" id="donetodolist">
+
+      </div>
+    </div>
   </div>
 
-  <script src="main.js"></script>
 </body>
 
 </html>

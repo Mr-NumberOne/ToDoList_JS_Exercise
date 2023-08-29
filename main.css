@@ -1,3 +1,4 @@
+/* General */
 .main_body {
   background-color: black;
   margin: auto;
@@ -11,7 +12,6 @@
 .in {
   height: 45px;
   font-size: 20px;
-
   width: calc(100% - 160px);
   margin-top: 10px;
   border-radius: 10px;
@@ -29,13 +29,31 @@
   font-family: "Bangers", cursive;
 }
 .btn:hover {
-  background-color: rgb(222, 205, 205) te;
+  background-color: darkred;
+  color: rgb(222, 205, 205);
 }
 
-h1 {
+h2 {
   text-align: start;
   color: antiquewhite;
   text-decoration: underline;
   font-weight: normal;
   font-family: "Bangers", cursive;
+}
+
+h2 button {
+  float: right;
+}
+
+h1 {
+  color: antiquewhite;
+  text-align: center;
+  font-weight: normal;
+  font-size: 50px;
+  text-shadow: 5px 5px 5px darkred;
+  font-family: "Bangers", cursive;
+}
+/*  For JS*/
+#done_body {
+  display: none;
 }
