@@ -18,6 +18,22 @@ function removeToDo(currentElement) {
   currentElement.parentElement.remove();
 }
 
+function editToDo(currentElement) {
+  let editedToDoVar = parseInt(
+    currentElement.parentElement.getAttribute("class")
+  );
+
+  var oldtodo = document.getElementById(`i${editedToDoVar}`).value;
+  var newtodo = window.prompt(`Edit To do`, `${oldtodo}`);
+  newtodo = newtodo.trim();
+  if (newtodo != "") {
+    ourlist.splice(editedToDoVar, 1, newtodo);
+  } else {
+    alert("You can't submit nothing! - so nothing was changed.");
+  }
+  UpdateToDoOnScreen(ourlist, "todolist");
+}
+
 // General
 function Clearlist(List, DivID) {
   List.splice(0);
@@ -32,12 +48,15 @@ function UpdateToDoOnScreen(List, divID) {
     if (divID == "todolist") {
       txt += `
         <div class="${index}">
-          <input type="text" class="in" readonly value=" ${value} " />
-          <button class="btn" id="${index}" onclick="return (confirm('Sure you want to delete ToDos ?'))? removeToDo(this):' '">
-            Delete
+          <input type="text" class="in" id="i${index}" readonly value=" ${value} " />
+          <button class="btn" id="e${index}" onclick="editToDo(this)">
+          <i class="fas fa-pen"></i>
+          </button>
+          <button class="btn" id="x${index}" onclick="return (confirm('Sure you want to delete ToDos ?'))? removeToDo(this):' '">
+          <i class="fas fa-trash"></i>
           </button>
           <button class="btn" id="d${index}" onclick="return (confirm('Sure you want to delete ToDos ?'))? MoveToDoneList(this):' '">
-            Done
+          <i class="fas fa-check"></i>
           </button>
         </div>
         <br>`;

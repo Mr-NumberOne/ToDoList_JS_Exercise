@@ -2,7 +2,7 @@
 .main_body {
   background-color: black;
   margin: auto;
-  width: 50%;
+  width: 60%;
   padding: 5px 25px 15px;
   text-align: center;
   border: solid darkred 3px;
@@ -12,13 +12,13 @@
 .in {
   height: 45px;
   font-size: 20px;
-  width: calc(100% - 160px);
+  width: calc(100% - 200px);
   margin-top: 10px;
   border-radius: 10px;
 }
 
-.btn {
-  width: 70px;
+button {
+  width: 90px;
   height: 45px;
   background-color: antiquewhite;
   color: darkred;
@@ -28,7 +28,7 @@
   font-weight: normal;
   font-family: "Bangers", cursive;
 }
-.btn:hover {
+button:hover {
   background-color: darkred;
   color: rgb(222, 205, 205);
 }
@@ -56,4 +56,8 @@ h1 {
 /*  For JS*/
 #done_body {
   display: none;
+}
+
+div div button.btn {
+  width: 60px !important;
 }

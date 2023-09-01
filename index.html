@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Qwitcher+Grypen&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <script src="main.js"></script>
 </head>
 
@@ -17,8 +18,8 @@
     <h1>Mr.Number One's ToDo List</h1>
     <div class="row">
       <input type="text" class="in" id="in2" />
-      <button class="btn" id="add" onclick="addTolist()">add</button>
-      <button class="btn" id="clear"
+      <button id="add" onclick="addTolist()">add</button>
+      <button id="clear"
         onclick="return (confirm('Sure you want to clear all ToDo\'s ?'))? Clearlist(ourlist,'todolist'):''">
         clear
       </button>
@@ -32,9 +33,9 @@
     <div class="" id="done_body">
       <hr />
       <h2>Done ToDos
-        <button class="btn" id="HideDoneList" onclick="HideDoneList()">X</button>
-        <button class="btn" id="clear2"
-          onclick="return (confirm('Sure you want to clear all ToDo\'s ?'))? Clearlist(Donelist,'donetodolist'):''">
+        <button id="HideDoneList" onclick="HideDoneList()">X</button>
+        <button id="clear2"
+          onclick="return (confirm('Sure you want to clear all Done ToDo\'s ?'))? Clearlist(Donelist,'donetodolist'):''">
           clear
         </button>
       </h2>
